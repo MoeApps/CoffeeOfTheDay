@@ -25,9 +25,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzv-oB-M8A">
-                                <rect key="frame" x="175" y="191" width="25" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzv-oB-M8A">
+                                <rect key="frame" x="175" y="389" width="25" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6D3-Lu-UjV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -51,11 +53,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go Back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="MeM-Ld-dX7"/>
+                                    <action selector="goBack:" destination="kMg-5s-8Wn" eventType="touchUpInside" id="jqT-bP-hbD"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kzv-oB-M8A" firstAttribute="centerX" secondItem="FzC-EC-75x" secondAttribute="centerX" id="lhE-Rq-hRd"/>
+                            <constraint firstItem="Kzv-oB-M8A" firstAttribute="centerY" secondItem="FzC-EC-75x" secondAttribute="centerY" id="yFz-do-y2u"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FzC-EC-75x"/>
                     </view>
                     <connections>
@@ -114,6 +120,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="f01657c547416ccac3bf3f3577b04910" width="1000" height="1408"/>
+        <image name="f01657c547416ccac3bf3f3577b04910" width="2000" height="2816"/>
     </resources>
 </document>

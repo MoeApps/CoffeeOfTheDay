@@ -14,14 +14,20 @@ class CoffeViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-    func randomCoffee() {
         
-        let coffees: [String] = ["Caffè Americano", "Café Latte", "Cappuccino", "Espresso", "Flat White", "Long Black", "Macchiato", "Mochaccino", "Irish Coffee", "Vienna", "Affogato"]
-        let index = Int(arc4random_uniform(UInt32(coffees.count-1)))
-        
-        print(coffees[index])
+        self.randomCoffee()
     }
     
+    func randomCoffee() {
+        
+        let coffeesArray: [String] = ["Caffè Americano", "Café Latte", "Cappuccino", "Espresso", "Flat White", "Long Black", "Macchiato", "Mochaccino", "Irish Coffee", "Vienna", "Affogato"]
+        let index = Int(arc4random_uniform(UInt32(coffeesArray.count-1)))
+        
+        let coffeeOfTheDay = coffeesArray[index]
+        coffees.text = coffeeOfTheDay
+    }
+    
+    @IBAction func goBack(_ sender: UIButton) {
+        self.dismiss(animated: true)
     }
 }
